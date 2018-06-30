@@ -1,0 +1,27 @@
+#header{
+    height: 33px;
+    width: 1411px;
+    background: #ff0036;
+    font-size: 13px;
+    line-height: 32px;
+
+
+}
+#right{
+    float: right;
+}
+#left{
+    float: left;
+}
+#right .right1{
+    float: left;
+}
+#header a, #left span{
+    color:#fff;
+}
+#header a{
+    padding: 0 14px;
+}
+#header a:hover{
+    color: #ffd2d2;
+}
