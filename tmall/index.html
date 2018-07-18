@@ -5,7 +5,10 @@
     <title>天猫</title>
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="stylesheet" href="css/common.css"/>
-    <link rel="shortcut icon" href="../img/bitbug_favicon.ico"/>
+    <link rel="shortcut icon" href="img/bitbug_favicon.ico"/>
+    <link rel="stylesheet" href="gouwuche/iconfont.css"/>
+    <link rel="stylesheet" href="phone/iconfont.css"/>
+    <link rel="stylesheet" href="daohang/iconfont.css"/>
 </head>
 <body>
     <div id="header">
@@ -13,20 +16,273 @@
             <p id="left">
                 <span>喵，欢迎来到天猫</span>
                 <a href="">请登录</a>
-                <a href="">免费注册</a>
+                <a href="" class="register">免费注册</a>
             </p>
             <ul id="right">
-                <li class="right1 triangle"><a href="">我的淘宝</a></li>
-                <li class="right1"><a href="">购物车0件</a></li>
-                <li class="right1 triangle"><a href="">收藏夹</a></li>
-                <li class="right1"><a href="">手机版</a></li>
-                <li class="right1"><a href="">淘宝网</a></li>
-                <li class="right1 triangle"><a href="">商家支持</a></li>
-                <li class="right1 triangle"><a href="">站点导航</a></li>
+                <li class="right1 triangle">
+                    <a href="">我的淘宝</a>
+                    <ul class="submenu">
+                         <li><a href="">已买到的宝贝</a></li>
+                         <li><a href="">已卖出的宝贝</a></li>
+                    </ul>
+                </li>
+                <li class="right1">
+                    <i class=" iconfont icon-gouwuche2-copy"></i>
+                    <a href="">购物车0件</a>
+                </li>
+                <li class="right1 triangle">
+                    <a href="">收藏夹</a>
+                    <ul class="submenu">
+                        <li><a href="">收藏的宝贝</a></li>
+                        <li><a href="">收藏的店铺</a></li>
+                    </ul>
+                </li>
+                <li class="right1 split"></li>
+                 <li class="right1 mobile">
+                     <i class="iconfont icon-shouji"></i>
+                    <a href="">手机版</a>
+                    <div class="qr-code"><img src="img/timg.gif" alt=""/></div>
+                </li>
+                <li class="right1">
+                    <a href="">淘宝网</a>
+                </li>
+                <li class="right1 triangle">
+                    <a href="">商家支持</a>
+                    <ul class="moremenu">
+                        <li>商家：</li>
+                        <li><a href="">商家中心</a>  <a href="">天猫规则</a></li>
+                        <li><a href="">商家入驻</a>  <a href="">运营服务</a></li>
+                        <li><a href="">商家品控</a>  <a href="">商家工具</a></li>
+                        <li><a href="">天猫智库</a>  <a href="">喵言喵语</a></li>
+                    </ul>
+
+                    <ul class="moremenu2">
+                        <li>帮助：</li>
+                        <li><a href="">帮助中心</a> <a href="">问商友</a></li>
+                    </ul>
+                <!--<li class="right1 imaginary"></li>-->
+                </li>
+
+                <li class="right1 triangle">
+                    <i class="iconfont icon-daohang"></i>
+                    <a href="">站点导航</a>
+                </li>
             </ul>
         </div>
     </div>
+    <div id="logo-search">
+        <div class="wapper">
+            <div id="logo">
+                <img src="img/logo.png" alt=""/>
+            </div>
+            <div id="search">
+                    <form class="search-box">
+                        <input type="text" class="search-ipt" placeholder="搜索 天猫 商品/品牌/店铺"/>
+                        <button class="search-btm">搜索</button>
+                    </form>
+                <ul class="search-li">
+                    <li><a href="">针织衫</a></li>
+                    <li class="search-li split"></li>
+                    <li class="wordc"><a href="">连衣裙</a></li>
+                    <li class="search-li split"></li>
+                    <li><a href="">四件套</a></li>
+                    <li class="search-li split"></li>
+                    <li class="wordc"><a href="">摄像头</a></li>
+                    <li class="search-li split"></li>
+                    <li><a href="">客厅灯</a></li>
+                    <li class="search-li split"></li>
+                    <li class="wordc"><a href="">口红</a></li>
+                    <li class="search-li split"></li>
+                    <li><a href="">手机</a></li>
+                    <li class="search-li split"></li>
+                    <li><a href="">运动鞋</a></li>
+                    <li class="search-li split"></li>
+                    <li class="wordc"><a href="">牛奶</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div id="main-nav">
+        <div class="wapper">
+            <ul class="nav">
+                <li><a href=""><img src="img/tmsuper.png" alt=""/></a></li>
+                <li><a href=""><img src="img/tminter.png" alt=""/></a></li>
+                <li><a href="">天猫会员</a></li>
+                <li><a href="">电器城</a></li>
+                <li><a href="">喵生鲜</a></li>
+                <li><a href="">医药馆</a></li>
+                <li><a href="">营业厅</a></li>
+                <li><a href="">魅力汇</a></li>
+                <li><a href="">飞猪旅行</a></li>
+                <li><a href="">苏宁易购</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="banner">
+        <div class="wapper">
+            <ul class="cate-type">
+                <li class="product-type">
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>商品分类</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>女装&nbsp/内衣</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>男装&nbsp/运动户外</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>女鞋&nbsp/男鞋&nbsp/箱包</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>美妆&nbsp/个人护理</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>腕表&nbsp/眼镜&nbsp/珠宝首饰</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>手机&nbsp/数码&nbsp/电脑办公</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>母婴玩具</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>零食&nbsp/茶酒&nbsp/进口食品</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>生鲜水果</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>大家电&nbsp/生活电器</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>家具器材</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                       <span>汽车&nbsp/配件用品</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>家纺&nbsp/家室&nbsp/鲜花</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                       <span>医药保健</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>厨具&nbsp/收纳&nbsp/宠物</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="iconfont icon-daohang"></i>
+                        <span>图书音像</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul id="right-bar">
+        <li class="right-bar-tap">
+            <i class="iconfont icon-gouwuche2-copy"></i>
+            <div class="vip">会员权益</div>
+        </li>
+        <li class="right-bar-tap">
+            <div class="right-barw">
+                <a href="">
+                    <i class="iconfont icon-daohang"></i>
+                    <div class="right-bar-word">
+                        <span>购</span>
+                        <span>物</span>
+                        <span>车</span>
+                    </div>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <div id="interact-con">
+        <ul id="interact-con-con">
+            <li class="interact-img">
+                <a href=""><img src="img/cxk.jpg" alt=""/></a>
+            </li>
+            <li class="interact-img">
+                <a href=""><img src="img/girlclothes.jpg" alt=""/></a>
+            </li>
+            <li class="interact-img">
+                <a href=""><img src="img/cxk.jpg" alt=""/></a>
+            </li>
+            <li class="interact-img"><a href=""><img src="img/girlclothes.jpg" alt=""/></a></li>
+            <li class="interact-img"><a href=""><img src="img/cxk.jpg" alt=""/></a></li>
+        </ul>
+        <ul id="module-body">
+            <li class="module-body1">
+                <div class="module-word">
+                    <span></span>
+                    <a href=""><img src="img/wl.jpg" alt=""/></a>
+                </div>
+            </li>
+            <li class="module-body2">
+               <div class="module-word">
+                   <span></span>
+                   <a href=""><img src="img/lanzhi.jpg" alt=""/></a>
+               </div>
+            </li>
+            <li class="module-body3">
+                <div class="module-word">
+                    <span></span>
+                    <a href=""><img src="img/dove.jpg" alt=""/></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
 </body>
 </html>
+
 
 
