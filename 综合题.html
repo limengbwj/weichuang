@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //1．随机生成两个小数给变量x.y，然后显示这两个数中的最大值。（提示：语句“var x=Math.random();”可为变量生成一个随机小数：另外，使用条件运算符‘'?:")
+   /* var x=Math.random();
+    var y=Math.random();
+    console.log(x);
+    console.log(y);
+    x>y?console.log(x):console.log(y);*/
+//2．如果某年的年份值是4的倍数并且不是100的倍数，或者该年份值是400的倍数，那么这一年就是闰年。请编制一个页面，该页面显示当天是否处于闰年。
+   /* var today = new Date();
+    var year = today.getFullYear();
+    if(year%4==0 && year%100 !=0){
+        console.log("是闰年")
+    }else{
+        console.log('不是闰年')
+    }
+
+    function getleapYear(year){
+    if(year%4==0 && year%100 !=0){
+    console.log("是闰年")
+    }else{
+    console.log('不是闰年')
+    }
+    }
+    console.log(getLeapYear(2016));*/
+
+//1.编写程序．通过用户输入的年龄判断是哪个年龄段的人（儿童：年龄＜14；青少年：14<=年龄＜24；青年：24<年龄＜40; 中年：40＜=年龄＜60; 老年：年龄>=60），并在页面上输出判断结果。
+  /*  var age= window.prompt("请输入你的年龄");
+    console.log(age);
+    if(age<14){
+        console.log('儿童');
+    }else if(age>=14 && age<24){
+        console.log('青少年');
+    }else if(age>=24 && age<40 ){
+        console.log('青年');
+    }else if(age>=40 && age<60){
+        console.log('中年');
+    }else if(age>=60){
+        console.log('老年');
+    }*/
+
+//2.编写程序，根据用户输入的一个数字(0~6)．通过警示对话框显示对应的星期几(0: 星期日; 1: 星期一;……6: 星期六;)。
+// var week= window.prompt("请输入数字");
+   /* switch (week){
+        case '0':
+            console.log('星期日');
+            break;
+        case '1':
+            console.log('星期一');
+            break;
+        case '2':
+            console.log('星期二');
+            break;
+        case '3':
+            console.log('星期三');
+            break;
+        case '4':
+            console.log('星期四');
+            break;
+        case '5':
+            console.log('星期五');
+            break;
+        case '6':
+            console.log('星期六');
+            break;
+    }
+    console.log(week);*/
+
+/*   if(week==0){
+        console.log('星期日');
+    }else if(week==1){
+        console.log('星期一');
+    }else if(week==2 ){
+        console.log('星期二');
+    }else if(week==3){
+        console.log('星期三');
+    }else if(week==4){
+        console.log('星期四');
+    }else if(week==5){
+        console.log('星期五');
+    }else if(week==6) {
+       console.log('星期六');
+   }*/
+
+//3.编写程序，计算10!(即 1*2*3＊·…10）的结果(10的阶乘)。
+   /* var a=1;
+    var b;
+    for(b=1;b<=10;b++){
+        a=a*b;
+    }
+    console.log(a);*/
+
+
+ //4.编写程序，计算 1!+2!+3!+…..＋10！的结果
+  /*  var a;
+    var sum=1;
+    var s=0;
+    for(a=1;a<=10;a++){
+        sum=sum*a;
+        s=s+sum;
+    }
+    console.log(s);*/
+
+ //5.在页面上输出如下数字图案。
+//    var a;
+//    var k;
+//    for(a=0;a<=5;a++){
+//        for(k=1;k<=a;k++){
+//            document.writeln('1');
+//        }
+//        document.writeln("<br/>")
+ //     }
+//老师讲的
+  /*  function print(n){
+        for(var i=1;i<=n;i++){
+            for(var j=1;j<=i;j++){
+                document.writeln(j+"&nbsp");
+            }
+            document.writeln("<br/>");
+        }
+    }*/
+
+
+////6.在页面上输出如下图案。
+   /* var a;
+    var b;
+    var k;
+    for(a=0;a<=5;a++){
+        for(b=5;b>=a;b--){
+            document.writeln("&nbsp");
+        }for(k=1;k<=a;k++){
+           document.writeln("*&nbsp") ;
+        }
+            document.writeln("<br/>");
+    }*/
+
+//7.有一个三位数x，被4除余2，被7除余3，被9除余5，请求出这个数
+   /* var x;
+    for(x=100;x<=999;x++){
+        if(x%4==2 && x%7==3 && x%9==5){
+            document.writeln(x+"&nbsp");
+        }
+    }*/
+
+
+
+//8.求所有满足条件的四位数ABCD，它是13的倍数，且第3位数加上第2位数等于第4位数（即：A=B+C）。（提示：对于四位数的整数x，通过Math.floor(x/1000)可求出第4位的数字，其他位数的提取也类似）
+//for(var i=1000;i<10000;i++){
+//    if(i%13==0 && (Math.floor(i/1000)==Math.floor(x/1000)%100==Math.floor(x/1000)%10==))
+//}
+//1. 编写一个函数 f(x) = 4x2+3x+2，使用户通过提示对话框输入x的值，能得到相应的计算结果。
+
+
+//2.编写一个函数Min(x,y)求出x,y这两个数中的最小值，要求x,y的值由用户通过提示对话框输入。
+//    var x,y= window.prompt("请输入数字");
+//   if(x<y){
+//       document.writeln(y);
+//   }else{
+//       document.writeln(x);
+//   }
+//3.编写一个判断某个非负整数是否能够同时被3,5,7整除的函数，然后在页面上输出1~1000之间所有能同时被3,5,7整除的整数，并要求每行显示6个这样的数
+//   for(var i=1;i<=10000;i++){
+//       if(i%3==0 && i%5==0 && i%7==0){
+//           document.writeln(i);
+//       }
+//
+//   }
+
+//4.在页面上编程输出100~1000之间的所有素数，并要求每行显示6个素数。
+    for(var i=100;i<=1000;i++){
+        if(i%i==0){
+            document.writeln(i);
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

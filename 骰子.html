@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+        }
+        body{
+            background: #fafad2;
+            perspective: 1000px;
+            perspective-origin: 50% 50%;
+        }
+        @keyframes rotate {
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+        .parent{
+            position: absolute;
+            margin: 300px auto;
+            margin-left: 300px;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: rotate 5s linear infinite;
+        }
+        .ha{
+            width: 300px;
+            height: 300px;
+            background-color:#ffa07a;
+            opacity: 0.6;
+            font-size: 88px;
+            text-align: center;
+            line-height: 300px;
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #ffffff;
+        }
+        .div1{
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+        .div2{
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        .div3{
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        .div4{
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+        .div5{
+            transform: rotateY(180deg) translateZ(150px);
+        }
+        .div6{
+            transform:  translateZ(150px);
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="ha div1">1</div>
+    <div class="ha div2">2</div>
+    <div class="ha div3">3</div>
+    <div class="ha div4">4</div>
+    <div class="ha div5">5</div>
+    <div class="ha div6">6</div>
+</div>
+</body>
+</html>
