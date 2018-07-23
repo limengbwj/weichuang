@@ -124,64 +124,141 @@
             }
             document.writeln("<br/>");
         }
-    }*/
+
+    }
+    print(9)*/
 
 
 ////6.在页面上输出如下图案。
-   /* var a;
-    var b;
-    var k;
-    for(a=0;a<=5;a++){
-        for(b=5;b>=a;b--){
-            document.writeln("&nbsp");
-        }for(k=1;k<=a;k++){
-           document.writeln("*&nbsp") ;
-        }
-            document.writeln("<br/>");
-    }*/
+  /* function print(n) {
+       var a;
+       var b;
+       var k;
+       for (a = 0; a <= 5; a++) {
+           for (b = 5; b >= a; b--) {
+               document.writeln("&nbsp");
+           }
+           for (k = 1; k <= a; k++) {
+               document.writeln("*&nbsp");
+           }
+           document.writeln("<br/>");
+       }
+   }
 
+*/
 //7.有一个三位数x，被4除余2，被7除余3，被9除余5，请求出这个数
    /* var x;
     for(x=100;x<=999;x++){
         if(x%4==2 && x%7==3 && x%9==5){
-            document.writeln(x+"&nbsp");
+            document.writeln(x+"<br>");
         }
     }*/
 
 
 
 //8.求所有满足条件的四位数ABCD，它是13的倍数，且第3位数加上第2位数等于第4位数（即：A=B+C）。（提示：对于四位数的整数x，通过Math.floor(x/1000)可求出第4位的数字，其他位数的提取也类似）
-//for(var i=1000;i<10000;i++){
-//    if(i%13==0 && (Math.floor(i/1000)==Math.floor(x/1000)%100==Math.floor(x/1000)%10==))
-//}
+  /*  for(var i=1000;i<10000;i++){
+     if(i%13==0 && (Math.floor(i/1000)==Math.floor(x/100)%10+Math.floor(x/10)%10==)){
+       document.write(x+"<br>");
+     }
+    }*/
 //1. 编写一个函数 f(x) = 4x2+3x+2，使用户通过提示对话框输入x的值，能得到相应的计算结果。
-
-
+  /* function num(){
+       var f_x=4*pow(x,2)+3*x+2;
+       return f_x;
+   }
+    var x=window.prompt("输入x的值");
+    document.writeln(num());*/
 //2.编写一个函数Min(x,y)求出x,y这两个数中的最小值，要求x,y的值由用户通过提示对话框输入。
-//    var x,y= window.prompt("请输入数字");
-//   if(x<y){
-//       document.writeln(y);
-//   }else{
-//       document.writeln(x);
-//   }
+ /*function getMin(){
+     return x<y?x:y;
+ }
+    var x=window.prompt('x');
+    var  y=window.prompt('y');
+    document.writeln(getMin());*/
 //3.编写一个判断某个非负整数是否能够同时被3,5,7整除的函数，然后在页面上输出1~1000之间所有能同时被3,5,7整除的整数，并要求每行显示6个这样的数
-//   for(var i=1;i<=10000;i++){
-//       if(i%3==0 && i%5==0 && i%7==0){
-//           document.writeln(i);
-//       }
-//
-//   }
+ /* var n=0;
+   for(var i=1;i<=10000;i++){
+       if(i%3==0 && i%5==0 && i%7==0){
+           document.writeln(i+'&nbsp');
+           n++;
+           if((n+1)%6==0){
+               document.writeln("<br>");
+           }
+       }
+
+   }*/
 
 //4.在页面上编程输出100~1000之间的所有素数，并要求每行显示6个素数。
+  /*  function prime(num) {
+        var bFlag=false;
+        for (var i=2;i<num;i++ ){
+            if(num%i==0){
+                bFlag=false;
+                break;
+            }else{
+                bFlag=true;
+            }
+        }
+        return bFlag;
+    }
+    var  arr[];
     for(var i=100;i<=1000;i++){
-        if(i%i==0){
-            document.writeln(i);
+      if( prime(i)) {
+            arr[push(i)];
+      }
+    }*/
+
+//5.编写一个非递归函数factorial(n)，计算12!-10!的结果。
+//6.编写一个带一个参数（指定显示多少层星号“*”的函数，它在页面止输出的一个5层星号“*”图案类似
+  /* function print(){
+    for (a = 0; a <= n; a++) {
+        for (b = 1; b <=n-a; b++) {
+            document.writeln("&nbsp");
+        }
+        for (k = 1; k <= a; k++) {
+            document.writeln("*&nbsp");
+        }
+        document.writeln("<br/>");
         }
     }
+    var n=window.prompt("输入数字");
+    print();
+*/
+//7.斐波纳契（Fibonacci）数列的第一项是1，第二项是1，以后各项都是前两项的和。试用递归函数和非递归函数各编写一个程序，求斐波纳契数列第N项的值
+/*    function fibonacci1(){
+        if(n==1 || n==2){
+            return 1;
+        }
+       return fibonacci1(n-1)+fibonacci1(n-2);
+    }
+    console.log(fibonacci1(7));
+
+    function fibonacci2(n){
+        var  n1= 1,n2= 1,sum=0;
+        for(var i=2;i<n;i++){
+            sum=n1+n2;
+            n1=n2;
+            n2=sum;
+        }
+    }
+    */
+//8.编写函数，用下面的公式计算π的近似值。 在页面上输出当n=100，500，1000，10000时π的近似值
+
+//9.利用全局变量和函数，设计模拟幸运数字机游戏。设幸运数字为8，每次由计算机随机产生3个1-9之间(包括1和9）的随机数，当这3个随机数中有一个数字为8时，就算赢了一次，要求利用函数计算获胜率
 
 
-
-
+ //   1.编写程序，根据用户输入的数值，计算其平方、平方根和自然对数。
+    /*var x=window.prompt("输入一个数字");
+    function comp(){
+        x=form1,num1.value;
+        form1.result1.value=x*x;
+        form1.result2.value=Math.sqrt(x);
+        form1.result3.value=Math.log(x);
+    }*/
+ //2.使用Math对象的random()方法编制一个产生0~100之间（含0,100）的随机整数的函数。
+    /*var x=paseInt(Math.random()*100);
+    document.writeln(x);*/
 </script>
 </body>
 </html>
