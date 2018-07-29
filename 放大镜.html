@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>毕廷放大镜</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #small{
+            height: 400px;
+            width: 400px;
+            float: left;
+            position: relative;
+        }
+        #big{
+            height: 400px;
+            width: 400px;
+            float: left;
+            position: relative;
+            overflow: hidden;
+            display: none;
+        }
+
+        #nav{
+            height: 200px;
+            width: 200px;
+            background: #ffffff;
+            opacity: .3;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div id="small">
+        <img src="img/1.jpg" alt=""/>
+        <div id="nav"></div>
+    </div>
+    <div id="big">
+        <img src="img/2.jpg" alt="" id="bigmore"/>
+    </div>
+
+<script>
+    var osmall=document.getElementById('small');
+    var anav=document.getElementById('nav');
+    var obig=document.getElementById('big');
+    var abigmore=document.getElementById('bigmore');
+    osmall.onmouseover=function(){
+        console.log('osmall.onmouseover');
+        anav.style.display='block';
+        obig.style.display='block';
+    };
+    osmall.onmouseout=function(){
+        console.log('osmall.onmouseout');
+        anav.style.display='none';
+        obig.style.display='none';
+    };
+    anav.onmouseover=function(){
+        console.log('anav.onmouseover');
+    };
+    anav.onmouseout=function(){
+        console.log('anav.onmouseout');
+    };
+    osmall.onmousemove = function(evnt){
+        evnt = evnt || window.event;
+        var top = evnt.clientY - anav.offsetHeight / 2;
+        var left = evnt.clientX - anav.offsetWidth / 2;
+        if(top < 0){
+            top = 0;
+        }
+        if(left < 0){
+            left = 0;
+        }
+        var leftMax = osmall.offsetWidth - anav.offsetWidth;
+        var topMax = osmall.offsetHeight - anav.offsetHeight;
+        if(left > leftMax){
+            left = leftMax;
+        }
+        if(top > topMax){
+            top = topMax;
+        }
+        anav.style.top = top + 'px';
+        anav.style.left = left + 'px';
+        var navDansX = anav.offsetLeft / leftMax;
+        var navDansY = anav.offsetTop / topMax;
+        abigmore.style.left = -navDansX * (abigmore.offsetWidth - obig.offsetWidth) + 'px';
+        abigmore.style.top = -navDansY * (abigmore.offsetHeight - obig.offsetHeight) + 'px';
+    };
+
+    document.cookie='haha';
+</script>
+</body>
+</html>

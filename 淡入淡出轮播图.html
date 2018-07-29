@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        #container{
+            position: relative;
+        }
+        #picture{
+            position: relative;
+            height: 500px;
+        }
+        #picture div{
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: all 1s ease;
+        }
+        #picture .banner1{
+            background-color: #e8e8e8;
+        }
+        #picture .banner2{
+            background-color: #fd9943;
+        }
+        #picture .banner3{
+            background-color: #250147;
+        }
+        #container .actived{
+            opacity: 1;
+            z-index: 1;
+        }
+        #content{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 30px;
+            z-index: 999;
+        }
+        #content li{
+            height: 5px;
+            width: 30px;
+            background: #000;
+            opacity: .3;
+            cursor: pointer;
+            float: left;
+            margin-right: 10px;
+            filter: alpha(opacity=30);
+        }
+        #content .selected{
+            background-color: #fff;
+            opacity: .6;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="picture">
+        <div class="banner1 actived">
+            <img src="img/bgp1.jpg" alt="" />
+        </div>
+        <div class="banner2">
+            <img src="img/bgp3.jpg" alt="" />
+        </div>
+        <div class="banner3">
+            <img src="img/bgp4.jpg" alt="" />
+        </div>
+
+    </div>
+    <ul id="content">
+        <li class="selected"></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<script>
+    var opicture=document.getElementById('picture');
+    var adiv=opicture.getElementsByTagName('div');
+    var ocontent=document.getElementById('content');
+    var ali=ocontent.getElementsByTagName('li');
+    var inowindex
+
+    for(var i=0;i<ali.length;i++){
+        ali[i].index=i;
+        ali[i].onmouseover=function(){
+            for(var j=0;j<ali.length;j++){
+                ali.className='';
+                adiv.className=' banner' + (j+1);
+            }
+            this.className='selected';
+            adiv[this.index].className +=' actived';
+        };
+    }
+
+
+
+</script>
+</body>
+</html>
