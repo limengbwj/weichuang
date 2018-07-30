@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table{
+            border: 0;
+            border-collapse:collapse;
+        }
+        td{
+            font:normal 12px/17px Arial;
+            padding:2px;
+            width:100px;
+        }
+        th{
+            padding: 5px;
+            text-align: left;
+            border-bottom: 1px solid #e5e5e5;
+            width: 100px;
+            font:bold 12px/17px Arial;
+        }
+        .parent{
+            background: #FBA60A;
+            cursor: pointer;
+        }
+        .odd{
+            background:#FFFFEE;
+        }
+        .selected{
+            background:#FF6500;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <tr><th>姓名</th><th>性别</th><th>年龄</th></tr>
+    <tbody>
+        <tr id="row_1" class="parent"><td colspan="3">YHboys</td></tr>
+        <tr class="child_crow_1"><td>郭殿甲</td><td>男</td><td>14</td></tr>
+        <tr class="child_crow_1"><td>张俊一</td><td>男</td><td>14</td></tr>
+        <tr class="child_crow_1"><td>张铭浩</td><td>男</td><td>13</td></tr>
+
+        <tr id="row_2" class="parent"><td colspan="3">nex7</td></tr>
+        <tr class="child_crow_2"><td>朱正廷</td><td>男</td><td>22</td></tr>
+        <tr class="child_crow_2"><td>毕雯珺</td><td>男</td><td>21</td></tr>
+        <tr class="child_crow_2"><td>黄新淳</td><td>男</td><td>20</td></tr>
+
+        <tr id="row_3" class="parent"><td colspan="3">uniq</td></tr>
+        <tr class="child_crow_3"><td>王一博</td><td>男</td><td>21</td></tr>
+        <tr class="child_crow_3"><td>李瀚文</td><td>男</td><td>24</td></tr>
+    </tbody>
+    </thead>
+</table>
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function(){
+        $('tr.parent').click(function(){
+            $(this).toggleClass("selected").siblings('.child_'+this.id).toggle();
+        });
+    });
+</script>
+</body>
+</html>
